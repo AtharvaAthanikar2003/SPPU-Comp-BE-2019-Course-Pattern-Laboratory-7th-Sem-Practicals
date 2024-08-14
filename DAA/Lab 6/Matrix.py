@@ -39,7 +39,6 @@ def matrix_multiply_cell(A, B):
     for thread in threads:
         thread.join()
     return result
-
 def print_matrix(matrix):
     for row in matrix:
         print(' '.join(map(str, row)))
