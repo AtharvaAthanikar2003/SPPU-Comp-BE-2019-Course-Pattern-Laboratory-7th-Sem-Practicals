@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Fibonacci {
     public static int fibonacci(int n) {
         if (n <= 1)
@@ -22,8 +23,13 @@ public class Fibonacci {
         System.out.println();
     }
     public static void main(String[] args) {
-        recursive(20);
-        System.out.println();
-        iterative(15);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of Fibonacci numbers for recursive method: ");
+        int recursiveCount = scanner.nextInt();
+        recursive(recursiveCount);
+        System.out.print("Enter the number of Fibonacci numbers for iterative method: ");
+        int iterativeCount = scanner.nextInt();
+        iterative(iterativeCount);
+        scanner.close();
     }
 }
